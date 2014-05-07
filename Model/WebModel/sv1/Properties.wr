@@ -3,6 +3,10 @@
     <LoginUnit gr:x="700" gr:y="260" id="sv1#lgu1" name="Login">
       <KOLink id="sv1#lgu1#kln1" name="KOFlow1" to="sv1#page3#enu1" automaticCoupling="true" gr:bendpoints="-97,19,98,9"/>
     </LoginUnit>
-    <CreateUnit gr:x="695" gr:y="60" id="sv1#cru1" name="Createuser" entity="User"/>
+    <CreateUnit gr:x="630" gr:y="55" id="sv1#cru1" name="Createuser" entity="User">
+      <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#page5#mssu3">
+        <LinkParameter id="sv1#cru1#oln1#par6" name="userName_Shown Messages" source="userNameArray" target="sv1#page5#mssu3.shownMessages"/>
+      </OKLink>
+    </CreateUnit>
   </OperationUnits>
 </SiteView>
