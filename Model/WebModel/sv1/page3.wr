@@ -1,8 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="555" gr:y="140" id="sv1#page3" name="Page 3">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="230" id="sv1#page3" name="Login">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#page3#enu1" name="Login" entity="User" customDescriptor="false">
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page3#enu1" name="Login" entity="User" customDescriptor="false" linkOrder="sv1#page3#enu1#ln3">
       <Field id="sv1#page3#enu1#fld1" name="User" type="string" modifiable="true" attribute="userName"/>
       <Field id="sv1#page3#enu1#fld2" name="Password" type="password" modifiable="true" attribute="password"/>
+      <Link id="sv1#page3#enu1#ln3" name="Login" to="sv1#lgu1" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -11,6 +12,7 @@
         <layout:Unit unitId="sv1#page3#enu1">
           <layout:Field field="sv1#page3#enu1#fld1"/>
           <layout:Field field="sv1#page3#enu1#fld2"/>
+          <layout:Link link="sv1#page3#enu1#ln3"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

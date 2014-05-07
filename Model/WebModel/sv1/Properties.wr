@@ -1,3 +1,8 @@
-<SiteView id="sv1" name="Home" homePage="sv1#page1">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Home" homePage="sv1#page1">
+  <OperationUnits>
+    <LoginUnit gr:x="700" gr:y="260" id="sv1#lgu1" name="Login">
+      <KOLink id="sv1#lgu1#kln1" name="KOFlow1" to="sv1#page3#enu1" automaticCoupling="true" gr:bendpoints="-97,19,98,9"/>
+    </LoginUnit>
+    <CreateUnit gr:x="695" gr:y="60" id="sv1#cru1" name="Createuser" entity="User"/>
+  </OperationUnits>
 </SiteView>

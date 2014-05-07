@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="USER">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="USER" db:isView="true">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="OID"/>
     <Attribute name="userName" id="userName" type="string" db:column="USERNAME"/>
     <Attribute name="password" id="password" type="password" db:column="PASSWORD"/>
@@ -46,6 +46,6 @@
       <db:JoinColumn attribute="moduleOID" name="MODULE_OID"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database" type="Apache Derby" url="jdbc:derby://localhost:50124/TestDB;create=true" username="root" cryptedPassword="true" password="cm9vdA==" schema="APP">
+  <db:Database id="db1" name="Database" type="Apache Derby" url="jdbc:derby://localhost:50124/TestDB;create=true" username="root" cryptedPassword="true" password="cm9vdA==" schema="APP" showSQL="false">
   </db:Database>
 </DataModel>
