@@ -1,17 +1,20 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Home" homePage="sv1#page1">
   <OperationUnits>
-    <LoginUnit gr:x="675" gr:y="190" id="sv1#lgu1" name="Login">
+    <LoginUnit gr:x="465" gr:y="185" id="sv1#lgu1" name="Login">
       <KOLink id="sv1#lgu1#kln1" name="KOFlow1" to="sv1#page3#mssu6">
-        <LinkParameter id="sv1#lgu1#kln1#par7" name="Login faile_Shown Messages" sourceValue="Login faile" target="sv1#page3#mssu6.shownMessages"/>
+        <LinkParameter id="sv1#lgu1#kln1#par7" name="Login faile_Shown Messages" sourceValue="Login failed!" target="sv1#page3#mssu6.shownMessages"/>
       </KOLink>
       <OKLink id="sv1#lgu1#oln2" name="OKFlow2" to="sv1#page2#mssu2" automaticCoupling="true"/>
     </LoginUnit>
-    <CreateUnit gr:x="670" gr:y="40" id="sv1#cru1" name="Createuser" entity="User">
+    <CreateUnit gr:x="460" gr:y="-30" id="sv1#cru1" name="Createuser" entity="User">
       <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#lgu1">
         <LinkParameter id="sv1#cru1#oln1#par3" name="userName_Username" source="userNameArray" target="sv1#lgu1.username"/>
         <LinkParameter id="sv1#cru1#oln1#par4" name="password_Password" source="passwordArray" target="sv1#lgu1.password"/>
       </OKLink>
+      <KOLink id="sv1#cru1#kln3" name="KOFlow3" to="sv1#page4#mssu7">
+        <LinkParameter id="sv1#cru1#kln3#par12" name="Create user failed!_Shown Messages" sourceValue="Create user failed!" target="sv1#page4#mssu7.shownMessages"/>
+      </KOLink>
     </CreateUnit>
-    <LogoutUnit gr:x="355" gr:y="410" id="sv1#lou1" name="Logout" siteView="sv1"/>
+    <LogoutUnit gr:x="915" gr:y="40" id="sv1#lou1" name="Logout" siteView="sv1"/>
   </OperationUnits>
 </SiteView>

@@ -1,16 +1,33 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="455" gr:y="5" id="sv1#page4" name="Register">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="-65" id="sv1#page4" name="Register">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page4#enu2" name="Register" entity="User" linkOrder="sv1#page4#enu2#ln5">
-      <Field id="sv1#page4#enu2#fld3" name="UserName" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv1#page4#enu2#fld4" name="Password" type="password" modifiable="true" attribute="password"/>
-      <Field id="sv1#page4#enu2#fld5" name="Mail" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv1#page4#enu2#fld3" name="UserName" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page4#enu2#fld3#mnd6" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page4#enu2#fld4" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page4#enu2#fld4#mnd5" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page4#enu2#fld5" name="Mail" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page4#enu2#fld5#mnd2" name="Mandatory Field"/>
+        </VRules>
+      </Field>
       <Link id="sv1#page4#enu2#ln5" name="Register" to="sv1#cru1" type="normal" validate="true">
         <LinkParameter id="sv1#page4#enu2#ln5#par10" name="User Object_User Object" source="entityBean" target="sv1#cru1.entityBeans"/>
         <LinkParameter id="sv1#page4#enu2#ln5#par1" name="Key [oid]_Group.oid(defaultGroup)" target="sv1#cru1.User2DefaultGroup.groupOID" sourceValue="2"/>
-        <LinkParameter id="sv1#page4#enu2#ln5#par11" name="Traveller_membership" sourceValue="Traveller" target="sv1#cru1.User#att1"/>
       </Link>
-      <SelectionField id="sv1#page4#enu2#sfld1" name="Membership" type="string" role="rel1#role1"/>
+      <SelectionField id="sv1#page4#enu2#sfld2" name="Membership" type="string" splitOutput="true" attribute="User#att5">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page4#enu2#sfld2#mnd1" name="Mandatory Field"/>
+        </VRules>
+        <Slot id="sv1#page4#enu2#sfld2#slot1" name="Options" label="true" output="true" value="Traveler|Business"/>
+      </SelectionField>
     </EntryUnit>
+    <MultiMessageUnit gr:x="0" gr:y="90" id="sv1#page4#mssu7" name="Error Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -20,8 +37,26 @@
           <layout:Field field="sv1#page4#enu2#fld3"/>
           <layout:Field field="sv1#page4#enu2#fld4"/>
           <layout:Field field="sv1#page4#enu2#fld5"/>
-          <layout:Field field="sv1#page4#enu2#sfld1"/>
+          <layout:Field field="sv1#page4#enu2#sfld2">
+            <layout:LayoutParameter name="selection-field-rendering" value="radio" type="field"/>
+          </layout:Field>
         </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page4#mssu7"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,8 +1,16 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="455" gr:y="145" id="sv1#page3" name="Login">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="140" id="sv1#page3" name="Login">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page3#enu1" name="Login" entity="User" customDescriptor="false" linkOrder="sv1#page3#enu1#ln3">
-      <Field id="sv1#page3#enu1#fld1" name="User" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv1#page3#enu1#fld2" name="Password" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv1#page3#enu1#fld1" name="User" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page3#enu1#fld1#mnd4" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page3#enu1#fld2" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page3#enu1#fld2#mnd3" name="Mandatory Field"/>
+        </VRules>
+      </Field>
       <Link id="sv1#page3#enu1#ln3" name="Login" to="sv1#lgu1" type="normal" validate="true">
         <LinkParameter id="sv1#page3#enu1#ln3#par5" name="User_Username" source="sv1#page3#enu1#fld1" target="sv1#lgu1.username"/>
         <LinkParameter id="sv1#page3#enu1#ln3#par6" name="Password_Password" source="sv1#page3#enu1#fld2" target="sv1#lgu1.password"/>

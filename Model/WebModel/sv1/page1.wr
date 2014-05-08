@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="75" id="sv1#page1" name="Home">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="35" gr:y="70" id="sv1#page1" name="Home">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
       <Message xml:space="preserve">Welcome to the TripAdvisor!</Message>
@@ -36,6 +36,6 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv1#page1#ln10" name="Register Traveller" to="sv1#page4#enu2" type="normal" automaticCoupling="true" validate="true"/>
+  <Link id="sv1#page1#ln10" name="Register" to="sv1#page4#enu2" type="normal" automaticCoupling="true" validate="true"/>
   <Link id="sv1#page1#ln11" name="Login" to="sv1#page3" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

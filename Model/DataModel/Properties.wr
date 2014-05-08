@@ -47,13 +47,6 @@
       <db:JoinColumn attribute="moduleOID" name="MODULE_OID"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database" type="Apache Derby" url="jdbc:derby://localhost:50124/TestDB;create=true" username="root" cryptedPassword="true" password="cm9vdA==" schema="APP" showSQL="false"/>
-  <Entity gr:x="265" gr:y="60" id="ent1" name="Membership" duration="persistent" attributeOrder="ent1#att2 ent1#att3" db:database="db1" db:table="MEMBERSHIP">
-    <Attribute id="ent1#att2" key="true" name="oid" type="integer" db:column="OID"/>
-    <Attribute id="ent1#att3" name="membershipName" type="string" db:column="MEMBERSHIPNAME"/>
-  </Entity>
-  <Relationship id="rel1" name="User_Membership" sourceEntity="User" targetEntity="ent1" db:database="db1" db:table="USER">
-    <RelationshipRole1 id="rel1#role1" name="UserToMembership" maxCard="1"/>
-    <RelationshipRole2 id="rel1#role2" name="MembershipToUser" maxCard="N"/>
-  </Relationship>
+  <db:Database id="db1" name="Database" type="Apache Derby" url="jdbc:derby://localhost:50124/TestDB;create=true" username="root" cryptedPassword="true" password="cm9vdA==" schema="APP" showSQL="false">
+  </db:Database>
 </DataModel>
