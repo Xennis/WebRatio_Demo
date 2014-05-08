@@ -5,11 +5,8 @@
       <Field id="sv1#page4#enu2#fld4" name="Password" type="password" modifiable="true" attribute="password"/>
       <Field id="sv1#page4#enu2#fld5" name="Mail" type="string" modifiable="true" attribute="email"/>
       <Link id="sv1#page4#enu2#ln5" name="Register" to="sv1#cru1" type="normal" validate="true">
-        <LinkParameter id="sv1#page4#enu2#ln5#par7" name="Mail_email" source="sv1#page4#enu2#fld5" target="sv1#cru1.email"/>
-        <LinkParameter id="sv1#page4#enu2#ln5#par8" name="Key [oid]_oid" source="key.userOID" target="sv1#cru1.userOID"/>
-        <LinkParameter id="sv1#page4#enu2#ln5#par9" name="Password_password" source="sv1#page4#enu2#fld4" target="sv1#cru1.password"/>
         <LinkParameter id="sv1#page4#enu2#ln5#par10" name="User Object_User Object" source="entityBean" target="sv1#cru1.entityBeans"/>
-        <LinkParameter id="sv1#page4#enu2#ln5#par11" name="UserName_userName" source="sv1#page4#enu2#fld3" target="sv1#cru1.userName"/>
+        <LinkParameter id="sv1#page4#enu2#ln5#par1" name="Key [oid]_Group.oid(defaultGroup)" target="sv1#cru1.User2DefaultGroup.groupOID" sourceValue="2"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

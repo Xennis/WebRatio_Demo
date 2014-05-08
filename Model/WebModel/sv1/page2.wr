@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="255" gr:y="255" id="sv1#page2" name="Test">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="260" gr:y="370" id="sv1#page2" name="Test">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu2" name="Message2">
       <Message xml:space="preserve">Second page</Message>
