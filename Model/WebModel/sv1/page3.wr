@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="455" gr:y="140" id="sv1#page3" name="Login">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="455" gr:y="145" id="sv1#page3" name="Login">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page3#enu1" name="Login" entity="User" customDescriptor="false" linkOrder="sv1#page3#enu1#ln3">
       <Field id="sv1#page3#enu1#fld1" name="User" type="string" modifiable="true" attribute="userName"/>
@@ -8,6 +8,7 @@
         <LinkParameter id="sv1#page3#enu1#ln3#par6" name="Password_Password" source="sv1#page3#enu1#fld2" target="sv1#lgu1.password"/>
       </Link>
     </EntryUnit>
+    <MultiMessageUnit gr:x="0" gr:y="90" id="sv1#page3#mssu6" name="Error Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -32,6 +33,22 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page3#mssu6"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

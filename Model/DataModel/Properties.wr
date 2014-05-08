@@ -1,10 +1,10 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1" db:database="db1" db:table="USER" db:isView="true">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="USER" db:isView="false">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="OID"/>
     <Attribute name="userName" id="userName" type="string" db:column="USERNAME"/>
     <Attribute name="password" id="password" type="password" db:column="PASSWORD"/>
     <Attribute name="email" id="email" type="string" db:column="EMAIL"/>
-    <Attribute id="User#att1" name="membership" type="string"/>
+    <Attribute id="User#att5" name="membership" db:column="MEMBERSHIP" type="string" key="false"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:isView="false" db:table="GROUP">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="OID"/>
@@ -47,6 +47,13 @@
       <db:JoinColumn attribute="moduleOID" name="MODULE_OID"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database" type="Apache Derby" url="jdbc:derby://localhost:50124/TestDB;create=true" username="root" cryptedPassword="true" password="cm9vdA==" schema="APP" showSQL="false">
-  </db:Database>
+  <db:Database id="db1" name="Database" type="Apache Derby" url="jdbc:derby://localhost:50124/TestDB;create=true" username="root" cryptedPassword="true" password="cm9vdA==" schema="APP" showSQL="false"/>
+  <Entity gr:x="265" gr:y="60" id="ent1" name="Membership" duration="persistent" attributeOrder="ent1#att2 ent1#att3" db:database="db1" db:table="MEMBERSHIP">
+    <Attribute id="ent1#att2" key="true" name="oid" type="integer" db:column="OID"/>
+    <Attribute id="ent1#att3" name="membershipName" type="string" db:column="MEMBERSHIPNAME"/>
+  </Entity>
+  <Relationship id="rel1" name="User_Membership" sourceEntity="User" targetEntity="ent1" db:database="db1" db:table="USER">
+    <RelationshipRole1 id="rel1#role1" name="UserToMembership" maxCard="1"/>
+    <RelationshipRole2 id="rel1#role2" name="MembershipToUser" maxCard="N"/>
+  </Relationship>
 </DataModel>

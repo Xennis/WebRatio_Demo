@@ -9,6 +9,7 @@
         <LinkParameter id="sv1#page4#enu2#ln5#par1" name="Key [oid]_Group.oid(defaultGroup)" target="sv1#cru1.User2DefaultGroup.groupOID" sourceValue="2"/>
         <LinkParameter id="sv1#page4#enu2#ln5#par11" name="Traveller_membership" sourceValue="Traveller" target="sv1#cru1.User#att1"/>
       </Link>
+      <SelectionField id="sv1#page4#enu2#sfld1" name="Membership" type="string" role="rel1#role1"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -19,6 +20,7 @@
           <layout:Field field="sv1#page4#enu2#fld3"/>
           <layout:Field field="sv1#page4#enu2#fld4"/>
           <layout:Field field="sv1#page4#enu2#fld5"/>
+          <layout:Field field="sv1#page4#enu2#sfld1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
