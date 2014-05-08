@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="445" gr:y="40" id="sv1#page4" name="Register">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="455" gr:y="5" id="sv1#page4" name="Register">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page4#enu2" name="Register" entity="User" linkOrder="sv1#page4#enu2#ln5">
       <Field id="sv1#page4#enu2#fld3" name="UserName" type="string" modifiable="true" attribute="userName"/>
@@ -7,6 +7,7 @@
       <Link id="sv1#page4#enu2#ln5" name="Register" to="sv1#cru1" type="normal" validate="true">
         <LinkParameter id="sv1#page4#enu2#ln5#par10" name="User Object_User Object" source="entityBean" target="sv1#cru1.entityBeans"/>
         <LinkParameter id="sv1#page4#enu2#ln5#par1" name="Key [oid]_Group.oid(defaultGroup)" target="sv1#cru1.User2DefaultGroup.groupOID" sourceValue="2"/>
+        <LinkParameter id="sv1#page4#enu2#ln5#par11" name="Traveller_membership" sourceValue="Traveller" target="sv1#cru1.User#att1"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
@@ -14,10 +15,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page4#enu2">
+          <layout:Link link="sv1#page4#enu2#ln5"/>
           <layout:Field field="sv1#page4#enu2#fld3"/>
           <layout:Field field="sv1#page4#enu2#fld4"/>
           <layout:Field field="sv1#page4#enu2#fld5"/>
-          <layout:Link link="sv1#page4#enu2#ln5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

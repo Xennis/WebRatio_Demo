@@ -1,9 +1,10 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="USER" db:isView="true">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1" db:database="db1" db:table="USER" db:isView="true">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="OID"/>
     <Attribute name="userName" id="userName" type="string" db:column="USERNAME"/>
     <Attribute name="password" id="password" type="password" db:column="PASSWORD"/>
     <Attribute name="email" id="email" type="string" db:column="EMAIL"/>
+    <Attribute id="User#att1" name="membership" type="string"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:isView="false" db:table="GROUP">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="OID"/>

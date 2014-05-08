@@ -1,15 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="680" gr:y="430" id="sv1#page2" name="Test">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="680" gr:y="430" id="sv1#page2" name="Logged_in">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu2" name="You are login" linkOrder="sv1#page2#mssu2#ln6">
-      <Message xml:space="preserve">Second page</Message>
-      <Link id="sv1#page2#mssu2#ln6" name="Logout" to="sv1#lou1" automaticCoupling="true" type="normal" validate="true"/>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu2" name="Welcome" linkOrder="sv1#page2#mssu2#ln9">
+      <Message xml:space="preserve">You are logged in.</Message>
+      <Link id="sv1#page2#mssu2#ln9" name="Back to home" to="sv1#page1#mssu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page2#mssu2#ln9#par12" name="&quot;Test&quot;_Shown Messages" sourceValue="&quot;Test&quot;" target="sv1#page1#mssu1.shownMessages"/>
+        <LinkParameter id="sv1#page2#mssu2#ln9#par13" name="true_loggedIn" sourceValue="true" targetVariable="sv1#page1#var1"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page2#mssu2">
-          <layout:Link link="sv1#page2#mssu2#ln6"/>
+          <layout:Link link="sv1#page2#mssu2#ln9"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

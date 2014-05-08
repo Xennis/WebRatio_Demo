@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="755" gr:y="60" id="sv1#page5" name="Confirm">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="795" gr:y="35" id="sv1#page5" name="Confirm">
   <ContentUnits>
     <MultiMessageUnit gr:x="10" gr:y="0" id="sv1#page5#mssu3" name="Confirm"/>
   </ContentUnits>
