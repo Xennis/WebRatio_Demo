@@ -10,5 +10,6 @@
         <LinkParameter id="sv1#cru1#oln1#par4" name="password_Password" source="passwordArray" target="sv1#lgu1.password"/>
       </OKLink>
     </CreateUnit>
+    <LogoutUnit gr:x="400" gr:y="485" id="sv1#lou1" name="Logout1" siteView="sv1"/>
   </OperationUnits>
 </SiteView>

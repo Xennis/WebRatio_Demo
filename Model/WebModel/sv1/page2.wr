@@ -1,13 +1,16 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="260" gr:y="370" id="sv1#page2" name="Test">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="680" gr:y="430" id="sv1#page2" name="Test">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu2" name="Message2">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu2" name="You are login" linkOrder="sv1#page2#mssu2#ln6">
       <Message xml:space="preserve">Second page</Message>
+      <Link id="sv1#page2#mssu2#ln6" name="Logout" to="sv1#lou1" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page2#mssu2"/>
+        <layout:Unit unitId="sv1#page2#mssu2">
+          <layout:Link link="sv1#page2#mssu2#ln6"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
