@@ -8,7 +8,3 @@ INSERT INTO "APP"."GROUP" ("OID", "GROUPNAME", "MODULE_OID") VALUES (2, 'Custome
 
 -- ---------- POPUPLATE TABLE "USER" ----------
 INSERT INTO "APP"."USER" ("OID", "USERNAME", "PASSWORD", "EMAIL", "GROUP_OID") VALUES (1, 'manager', 'manager', 'manager@acme.com', 1);
-
--- ---------- POPUPLATE TABLE "MEMBERSHIP" ----------
-INSERT INTO "APP"."MEMBERSHIP" ("OID", "MEMBERSHIPNAME") VALUES (1, 'Traveller');
-INSERT INTO "APP"."MEMBERSHIP" ("OID", "MEMBERSHIPNAME") VALUES (2, 'Business');
