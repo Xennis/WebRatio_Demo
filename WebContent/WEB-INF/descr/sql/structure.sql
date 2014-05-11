@@ -25,7 +25,16 @@ create table "APP"."USER" (
    "NAME"  varchar(255),
    "BITH_DATE"  date,
    "ADDRESS"  varchar(255),
-   "INTERESTS"  varchar(255),
+   "INTERESTS"  clob(10000),
+  primary key ("OID")
+);
+
+
+-- Review [pkg1#ent1]
+create table "APP"."REVIEW" (
+   "OID"  integer  not null,
+   "MESSAGE"  clob(10000),
+   "IMAGE"  varchar(255),
   primary key ("OID")
 );
 
@@ -58,5 +67,10 @@ create table "APP"."USER_GROUP" (
 );
 alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_USER foreign key ("USER_OID") references "APP"."USER" ("OID");
 alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID");
+
+
+-- User_Review [rel1]
+alter table "APP"."REVIEW"  add column  "USER_OID"  integer;
+alter table "APP"."REVIEW"   add constraint FK_REVIEW_USER foreign key ("USER_OID") references "APP"."USER" ("OID");
 
 

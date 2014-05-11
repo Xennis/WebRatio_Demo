@@ -7,4 +7,5 @@ INSERT INTO "APP"."GROUP" ("OID", "GROUPNAME", "MODULE_OID") VALUES (1, 'Adminis
 INSERT INTO "APP"."GROUP" ("OID", "GROUPNAME", "MODULE_OID") VALUES (2, 'Customers', 2);
 
 -- ---------- POPUPLATE TABLE "USER" ----------
-INSERT INTO "APP"."USER" ("OID", "USERNAME", "PASSWORD", "EMAIL", "GROUP_OID") VALUES (1, 'manager', 'manager', 'manager@acme.com', 1);
+-- INSERT INTO "APP"."USER" ("OID", "USERNAME", "PASSWORD", "EMAIL", "GROUP_OID") VALUES (1, 'manager', 'manager', 'manager@acme.com', 1);
+INSERT INTO "APP"."USER" ("OID", "USERNAME", "PASSWORD", "EMAIL", "GROUP_OID") VALUES (2, 'tony', 'tony', 'tony@gmail.com', 2);

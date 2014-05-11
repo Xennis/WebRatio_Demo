@@ -37,7 +37,7 @@
           <MandatoryValidationRule id="sv1#page4#enu2#fld8#mnd7" name="Mandatory Field"/>
         </VRules>
       </Field>
-      <Field id="sv1#page4#enu2#fld9" name="Interests" type="string" modifiable="true" attribute="User#att13"/>
+      <Field id="sv1#page4#enu2#fld9" name="Interests" type="text" modifiable="true" attribute="User#att13"/>
     </EntryUnit>
     <MultiMessageUnit gr:x="0" gr:y="90" id="sv1#page4#mssu7" name="Error Message"/>
   </ContentUnits>
@@ -45,15 +45,15 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page4#enu2">
+          <layout:Link link="sv1#page4#enu2#ln5"/>
           <layout:Field field="sv1#page4#enu2#fld3"/>
           <layout:Field field="sv1#page4#enu2#fld4"/>
           <layout:Field field="sv1#page4#enu2#fld5"/>
-          <layout:Field field="sv1#page4#enu2#sfld2"/>
           <layout:Field field="sv1#page4#enu2#fld6"/>
           <layout:Field field="sv1#page4#enu2#fld7"/>
           <layout:Field field="sv1#page4#enu2#fld8"/>
           <layout:Field field="sv1#page4#enu2#fld9"/>
-          <layout:Link link="sv1#page4#enu2#ln5"/>
+          <layout:Field field="sv1#page4#enu2#sfld2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
