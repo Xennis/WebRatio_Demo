@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-145" gr:y="125" id="sv1#page5" name="Write a review">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-145" gr:y="-65" id="sv1#page5" name="Write a review">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#page5#enu3" name="Review" entity="pkg1#ent1" linkOrder="sv1#page5#enu3#ln2">
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page5#enu3" name="Review" entity="pkg1#ent1" linkOrder="sv1#page5#enu3#ln2" fieldOrder="sv1#page5#enu3#fld11 sv1#page5#enu3#sfld1 sv1#page5#enu3#fld12">
       <Link id="sv1#page5#enu3#ln2" name="Post review" to="sv1#cru2" type="normal" validate="true">
         <LinkParameter id="sv1#page5#enu3#ln2#par2" name="Review Object_Review Object" source="entityBean" target="sv1#cru2.entityBeans"/>
         <LinkParameter id="sv1#page5#enu3#ln2#par11" name="2_User.oid(ReviewToUser)" sourceValue="2" target="sv1#cru2.rel1#role2.userOID"/>
@@ -10,7 +10,7 @@
           <MandatoryValidationRule id="sv1#page5#enu3#fld11#mnd11" name="Mandatory Field"/>
         </VRules>
       </Field>
-      <SelectionField id="sv1#page5#enu3#sfld1" name="Rating" type="string" role="rel1#role2" splitOutput="true">
+      <SelectionField id="sv1#page5#enu3#sfld1" name="Rating" type="string" role="rel1#role2" splitOutput="true" attribute="pkg1#ent1#att4">
         <VRules>
           <MandatoryValidationRule id="sv1#page5#enu3#sfld1#mnd10" name="Mandatory Field"/>
         </VRules>
