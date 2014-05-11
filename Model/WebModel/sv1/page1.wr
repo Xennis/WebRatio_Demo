@@ -3,6 +3,10 @@
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
       <Message xml:space="preserve">Welcome to the TripAdvisor!</Message>
     </MultiMessageUnit>
+    <MultiMessageUnit gr:x="0" gr:y="65" id="sv1#page1#mssu3" name="Reviews" linkOrder="sv1#page1#mssu3#ln1">
+      <Message xml:space="preserve">Reviews</Message>
+      <Link id="sv1#page1#mssu3#ln1" name="Write a review" to="sv1#page5#enu3" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -22,7 +26,11 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#mssu3">
+          <layout:Link link="sv1#page1#mssu3#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
