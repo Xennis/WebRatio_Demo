@@ -2,7 +2,7 @@
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu2" name="Login" linkOrder="sv1#page2#mssu2#ln9">
       <Message xml:space="preserve">You are logged in.</Message>
-      <Link id="sv1#page2#mssu2#ln9" name="Back to home" to="sv1#page1" type="normal" validate="true" gr:bendpoints="-375,-1,0,304"/>
+      <Link id="sv1#page2#mssu2#ln9" name="Back to home" to="sv1#page1" type="normal" validate="true" gr:bendpoints="-381,0,-1,265"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

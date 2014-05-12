@@ -1,0 +1,68 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="60" gr:y="-225" id="sv1#page6" name="Create offer">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page6#enu4" name="Offer" entity="pkg1#ent2" linkOrder="sv1#page6#enu4#ln4">
+      <Field id="sv1#page6#enu4#fld10" name="Address" type="string" modifiable="true" attribute="pkg1#ent2#att16">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page6#enu4#fld10#mnd9" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page6#enu4#fld13" name="City" type="string" modifiable="true" attribute="pkg1#ent2#att17">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page6#enu4#fld13#mnd12" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page6#enu4#fld14" name="Country" type="string" modifiable="true" attribute="pkg1#ent2#att18">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page6#enu4#fld14#mnd13" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page6#enu4#fld15" name="Description" type="text" modifiable="true" attribute="pkg1#ent2#att8">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page6#enu4#fld15#mnd14" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page6#enu4#fld16" name="Name" type="string" modifiable="true" attribute="pkg1#ent2#att7">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page6#enu4#fld16#mnd15" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page6#enu4#fld17" name="Image" type="url" modifiable="true" attribute="pkg1#ent2#att14"/>
+      <Field id="sv1#page6#enu4#fld18" name="Price" type="decimal" modifiable="true" attribute="pkg1#ent2#att15">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page6#enu4#fld18#mnd16" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#page6#enu4#ln4" name="Create offer" to="sv1#cru3" type="normal" validate="true">
+        <LinkParameter id="sv1#page6#enu4#ln4#par15" name="Offer Object_Offer Object" source="entityBean" target="sv1#cru3.entityBeans"/>
+        <LinkParameter id="sv1#page6#enu4#ln4#par16" name="2_User.oid(OfferToUser)" sourceValue="2" target="sv1#cru3.rel2#role3.userOID"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page6#enu4">
+          <layout:Field field="sv1#page6#enu4#fld10"/>
+          <layout:Field field="sv1#page6#enu4#fld13"/>
+          <layout:Field field="sv1#page6#enu4#fld14"/>
+          <layout:Field field="sv1#page6#enu4#fld15"/>
+          <layout:Field field="sv1#page6#enu4#fld16"/>
+          <layout:Field field="sv1#page6#enu4#fld17"/>
+          <layout:Field field="sv1#page6#enu4#fld18"/>
+          <layout:Link link="sv1#page6#enu4#ln4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

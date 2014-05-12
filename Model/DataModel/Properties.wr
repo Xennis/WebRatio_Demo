@@ -51,13 +51,25 @@
       <db:JoinColumn attribute="moduleOID" name="MODULE_OID"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="TravelAdvisorDB" type="Apache Derby" url="jdbc:derby://localhost:50124/TravelAdvisorDB;create=true" username="root" cryptedPassword="true" password="cm9vdHM=" schema="APP"/>
+  <db:Database id="db2" name="TravelAdvisorDB" type="Apache Derby" url="jdbc:derby://localhost:50124/TravelAdvisorDB;create=true" username="root" cryptedPassword="true" password="cm9vdHM=" schema="APP">
+  </db:Database>
   <Package gr:x="25" gr:y="400" id="pkg1" name="Core">
     <Entity gr:x="0" gr:y="0" id="pkg1#ent1" name="Review" duration="persistent" attributeOrder="pkg1#ent1#att1 pkg1#ent1#att2 pkg1#ent1#att3 pkg1#ent1#att4" db:database="db2" db:table="REVIEW">
       <Attribute id="pkg1#ent1#att1" key="true" name="oid" type="integer" db:column="OID"/>
       <Attribute id="pkg1#ent1#att2" name="message" type="text" db:column="MESSAGE" db:clob="true"/>
       <Attribute id="pkg1#ent1#att3" name="image" type="url" contentType="url" db:column="IMAGE"/>
       <Attribute id="pkg1#ent1#att4" name="rating" type="string" db:column="RATING"/>
+    </Entity>
+    <Entity gr:x="170" gr:y="10" id="pkg1#ent2" name="Offer" duration="persistent" attributeOrder="pkg1#ent2#att5 pkg1#ent2#att6 pkg1#ent2#att7 pkg1#ent2#att8 pkg1#ent2#att14 pkg1#ent2#att15 pkg1#ent2#att16 pkg1#ent2#att17 pkg1#ent2#att18" db:database="db2" db:table="OFFER">
+      <Attribute id="pkg1#ent2#att5" key="true" name="oid" type="integer" db:column="OID"/>
+      <Attribute id="pkg1#ent2#att6" name="code" type="integer" db:column="CODE"/>
+      <Attribute id="pkg1#ent2#att7" name="name" type="string" db:column="NAME"/>
+      <Attribute id="pkg1#ent2#att8" name="desc" type="text" db:column="DESC" db:clob="true"/>
+      <Attribute id="pkg1#ent2#att14" name="image" type="url" db:column="IMAGE"/>
+      <Attribute id="pkg1#ent2#att15" name="price" type="decimal" db:column="PRICE"/>
+      <Attribute id="pkg1#ent2#att16" name="address" type="string" db:column="ADDRESS"/>
+      <Attribute id="pkg1#ent2#att17" name="city" type="string" db:column="CITY"/>
+      <Attribute id="pkg1#ent2#att18" name="country" type="string" db:column="COUNTRY"/>
     </Entity>
   </Package>
   <Relationship id="rel1" name="User_Review" sourceEntity="User" targetEntity="pkg1#ent1" db:database="db2" db:table="REVIEW">
@@ -66,6 +78,22 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel1#role2" name="ReviewToUser" maxCard="1">
       <db:JoinColumn attribute="pkg1#ent1#att1" name="OID"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel2" name="Offer_User" sourceEntity="pkg1#ent2" targetEntity="User" db:database="db2" db:table="OFFER">
+    <RelationshipRole1 id="rel2#role3" name="OfferToUser" maxCard="1">
+      <db:JoinColumn attribute="pkg1#ent2#att5" name="OID"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="UserToOffer" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="USER_OID"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3" name="Review_Offer" sourceEntity="pkg1#ent1" targetEntity="pkg1#ent2" db:database="db2" db:table="REVIEW">
+    <RelationshipRole1 id="rel3#role5" name="ReviewToOffer" maxCard="1">
+      <db:JoinColumn attribute="pkg1#ent1#att1" name="OID"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="OfferToReview" maxCard="N">
+      <db:JoinColumn attribute="pkg1#ent2#att5" name="OFFER_OID"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

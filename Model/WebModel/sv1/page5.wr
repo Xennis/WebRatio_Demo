@@ -4,6 +4,7 @@
       <Link id="sv1#page5#enu3#ln2" name="Post review" to="sv1#cru2" type="normal" validate="true">
         <LinkParameter id="sv1#page5#enu3#ln2#par2" name="Review Object_Review Object" source="entityBean" target="sv1#cru2.entityBeans"/>
         <LinkParameter id="sv1#page5#enu3#ln2#par11" name="2_User.oid(ReviewToUser)" sourceValue="2" target="sv1#cru2.rel1#role2.userOID"/>
+        <LinkParameter id="sv1#page5#enu3#ln2#par19" name="oid_PASSING_Offer.oid(ReviewToOffer)" sourceLinkParameter="sv1#page1#inu2#ln8#par18" target="sv1#cru2.rel3#role5.pkg1#ent2#att5"/>
       </Link>
       <Field id="sv1#page5#enu3#fld11" name="Message" type="text" modifiable="true" attribute="pkg1#ent1#att2">
         <VRules>
@@ -17,6 +18,7 @@
         <Slot id="sv1#page5#enu3#sfld1#slot3" name="Options" label="true" output="true" value="Super|Good|OK|Bad"/>
       </SelectionField>
       <Field id="sv1#page5#enu3#fld12" name="Image" type="url" modifiable="true" attribute="pkg1#ent1#att3" contentType="url"/>
+      <Property id="sv1#page5#enu3#prop1" name="Offer"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

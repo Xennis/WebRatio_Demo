@@ -40,6 +40,21 @@ create table "APP"."REVIEW" (
 );
 
 
+-- Offer [pkg1#ent2]
+create table "APP"."OFFER" (
+   "OID"  integer  not null,
+   "IMAGE"  varchar(255),
+   "PRICE"  numeric(19,2),
+   "ADDRESS"  varchar(255),
+   "CITY"  varchar(255),
+   "COUNTRY"  varchar(255),
+   "CODE"  integer,
+   "NAME"  varchar(255),
+   "DESC"  clob(10000),
+  primary key ("OID")
+);
+
+
 -- Group_DefaultModule [Group2DefaultModule_DefaultModule2Group]
 alter table "APP"."GROUP"  add column  "MODULE_OID"  integer;
 alter table "APP"."GROUP"   add constraint FK_GROUP_MODULE foreign key ("MODULE_OID") references "APP"."MODULE" ("OID");
@@ -80,5 +95,17 @@ create index "IDX_USER_GROUP_GROUP" on "APP"."USER_GROUP"("GROUP_OID");
 alter table "APP"."REVIEW"  add column  "USER_OID"  integer;
 alter table "APP"."REVIEW"   add constraint FK_REVIEW_USER foreign key ("USER_OID") references "APP"."USER" ("OID");
 create index "IDX_REVIEW_USER" on "APP"."REVIEW"("USER_OID");
+
+
+-- Offer_User [rel2]
+alter table "APP"."OFFER"  add column  "USER_OID"  integer;
+alter table "APP"."OFFER"   add constraint FK_OFFER_USER foreign key ("USER_OID") references "APP"."USER" ("OID");
+create index "IDX_OFFER_USER" on "APP"."OFFER"("USER_OID");
+
+
+-- Review_Offer [rel3]
+alter table "APP"."REVIEW"  add column  "OFFER_OID"  integer;
+alter table "APP"."REVIEW"   add constraint FK_REVIEW_OFFER foreign key ("OFFER_OID") references "APP"."OFFER" ("OID");
+create index "IDX_REVIEW_OFFER" on "APP"."REVIEW"("OFFER_OID");
 
 
