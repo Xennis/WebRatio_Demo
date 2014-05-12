@@ -8,30 +8,30 @@ A simple WebRadio application
 
 ### Screenshots
 
-Domain model
+**Domain model**
 
 ![domain_model](_screenshots/domain_model.png)
 
-Site view *Home*
+**Site view *Home***
 
 ![site_view_home](_screenshots/site_view_home.png)
 
-Main page
+**Main page**
 
 ![main](_screenshots/page/main.png)
 
-Register a user
+**Register a user**
 
 ![register_user](_screenshots/page/register_user.png)
 
-Create a review
+**Create a review**
 
 ![create_review](_screenshots/page/create_review.png)
 
-Create a offer
+**Create a offer**
 
 ![create_offer](_screenshots/page/create_offer.png)
 
 ### Sources
 
-The service view *Initialization* and the related scripts bases on [Acme](http://www.webratio.com/store/item-details/acme?link=ln31z&cbck=wrReq80993)
+The service view *Initialization* and the related scripts bases on [Acme](http://www.webratio.com/store/item-details/acme?link=ln31z&cbck=wrReq80993).
