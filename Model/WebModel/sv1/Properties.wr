@@ -15,7 +15,7 @@
         <LinkParameter id="sv1#cru1#kln3#par12" name="Create user failed!_Shown Messages" sourceValue="Create user failed!" target="sv1#page4#mssu7.shownMessages"/>
       </KOLink>
     </CreateUnit>
-    <LogoutUnit gr:x="170" gr:y="450" id="sv1#lou1" name="Logout" siteView="sv1"/>
+    <LogoutUnit gr:x="555" gr:y="-190" id="sv1#lou1" name="Logout" siteView="sv1"/>
     <CreateUnit gr:x="-140" gr:y="115" id="sv1#cru2" name="Create_review" entity="pkg1#ent1">
       <KOLink id="sv1#cru2#kln4" name="KOFlow4" to="sv1#page5#enu3" automaticCoupling="true" gr:bendpoints="39,-65,39,70"/>
       <OKLink id="sv1#cru2#oln3" name="OKFlow3" to="sv1#page1#mssu3">
