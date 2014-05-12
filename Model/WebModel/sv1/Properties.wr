@@ -4,7 +4,9 @@
       <KOLink id="sv1#lgu1#kln1" name="KOFlow1" to="sv1#page3#mssu6">
         <LinkParameter id="sv1#lgu1#kln1#par7" name="Login faile_Shown Messages" sourceValue="Login failed!" target="sv1#page3#mssu6.shownMessages"/>
       </KOLink>
-      <OKLink id="sv1#lgu1#oln2" name="OKFlow2" to="sv1#page2#mssu2" automaticCoupling="true"/>
+      <OKLink id="sv1#lgu1#oln2" name="OKFlow2" to="sv1#page1#mssu3" gr:bendpoints="-1,146,379,121;-380,145,0,120">
+        <LinkParameter id="sv1#lgu1#oln2#par20" name="You are logged in!_Shown Messages" sourceValue="You are logged in!" target="sv1#page1#mssu3.shownMessages"/>
+      </OKLink>
     </LoginUnit>
     <CreateUnit gr:x="460" gr:y="-30" id="sv1#cru1" name="Createuser" entity="User">
       <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#lgu1">
@@ -23,7 +25,7 @@
       </OKLink>
     </CreateUnit>
     <CreateUnit gr:x="-215" gr:y="-190" id="sv1#cru3" name="Create_offer" entity="pkg1#ent2">
-      <KOLink id="sv1#cru3#kln5" name="KOFlow5" to="sv1#page6#enu4" automaticCoupling="true" gr:bendpoints="77,12,-78,17"/>
+      <KOLink id="sv1#cru3#kln5" name="KOFlow5" to="sv1#page6#enu4" automaticCoupling="true" gr:bendpoints="140,39,-140,39"/>
       <OKLink id="sv1#cru3#oln4" name="OKFlow4" to="sv1#page1#mssu3" gr:bendpoints="-2,389,-287,-1">
         <LinkParameter id="sv1#cru3#oln4#par17" name="Created offer_Shown Messages" sourceValue="Created offer" target="sv1#page1#mssu3.shownMessages"/>
       </OKLink>
